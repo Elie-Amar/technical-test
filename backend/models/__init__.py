@@ -4,6 +4,8 @@ from backend.models.models import (
     TransactionRow,
     TransactionState,
     TransactionType,
+    Deadline,
+    Balance,
     User,
     UserRow,
 )

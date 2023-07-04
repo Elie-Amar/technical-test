@@ -1,3 +1,4 @@
+from typing import Dict
 from datetime import date
 from enum import Enum
 
@@ -39,3 +40,14 @@ class Transaction(BaseModel):
 class TransactionRow(Row, Transaction):
     user_id: int
     state: TransactionState
+
+
+class Deadline(BaseModel):
+    due_amount: int = 0
+    covered_amount: int = 0
+    coverage_ratio: int = 0
+
+
+class Balance(BaseModel):
+    balance: int
+    deadlines: Dict[str, Deadline]
